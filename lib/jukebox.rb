@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -10,6 +11,8 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
+=======
+>>>>>>> bfc198670063e8b42ca3be7e9ec7e97b63e5e4c2
 def help
   puts "I accept the following commands:"
   puts "- help : displays this help message"
@@ -24,9 +27,15 @@ def play(songs)
   num = input.to_i
   index = num-1
   if songs.include?(input)
+<<<<<<< HEAD
     puts "Playing #{input}"
   elsif  num>0 && num<=songs.length()
     puts "Playing #{songs[index]}"
+=======
+    puts "Playing <#{input}>"
+  elsif  num>0 && num<=songs.length()
+    puts "Playing <#{songs[index]}>"
+>>>>>>> bfc198670063e8b42ca3be7e9ec7e97b63e5e4c2
   else
     puts "Invalid input, please try again"
   end
@@ -43,6 +52,7 @@ def exit_jukebox
 end
 
 def run(songs)
+<<<<<<< HEAD
   trig = 0
   out=0
   puts "Please enter a command:"
@@ -69,4 +79,21 @@ def run(songs)
     end
   end
   
+=======
+  puts "Please enter a command:"
+  input=gets.strip
+  while input == 'exit' do
+    if input =='help'
+      help
+    elsif input == 'list'
+      list(songs)
+    elsif input =='play'
+      play(songs)
+    elsif input =='exit'
+      exit_jukebox
+    else
+      
+    end  
+  end
+>>>>>>> bfc198670063e8b42ca3be7e9ec7e97b63e5e4c2
 end
